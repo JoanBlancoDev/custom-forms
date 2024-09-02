@@ -5,27 +5,35 @@ import '../styles/styles.css'
 
 const navLinks = [
     {
-        path: 'register',
+        name: 'register',
         to: '/register',
     },
     {
-        path: 'formik-basic',
+        name: 'dynamic-form',
+        to: '/dynamic-form',
+    },
+    {
+        name: 'formik-register',
+        to: '/formik-register',
+    },
+    {
+        name: 'formik-basic',
         to: '/formik-basic',
     },
     {
-        path: 'formik-yup',
+        name: 'formik-yup',
         to: '/formik-yup',
     },
     {
-        path: 'formik-components',
+        name: 'formik-components',
         to: '/formik-components',
     },
     {
-        path: 'formik-abstraction',
+        name: 'formik-abstraction',
         to: '/formik-abstraction',
     },
     {
-        path: 'users',
+        name: 'users',
         to: '/users',
     },
 ]
@@ -42,8 +50,8 @@ export const SideBar = () => {
             {
 
                 navLinks.map( navLink => (
-                    <li key={navLink.path}>
-                        <NavLink className={({isActive}) => isActive ? 'active' : '' } to={navLink.to} end>{navLink.path}</NavLink>
+                    <li key={navLink.name}>
+                        <NavLink className={({isActive}) => isActive ? 'active' : '' } to={navLink.to} end>{navLink.name}</NavLink>
                     </li>
                 ))
             }

@@ -1,9 +1,17 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import { FormLayout } from "../layout/FormLayout"
-import { FormikAbstraction, FormikBasicPage , FormikComponents, FormikYupPage } from "../pages"
+import { DynamicFormPage, FormikAbstraction, FormikBasicPage , FormikComponents, FormikYupPage, RegisterFormikPage } from "../pages"
 
 
 const routes = [
+    {
+        path: 'dynamic-form',
+        component: <DynamicFormPage/>
+    },
+    {
+        path: 'formik-register',
+        component: <RegisterFormikPage/>
+    },
     {
         path: 'register',
         component: <h1>Register</h1>
